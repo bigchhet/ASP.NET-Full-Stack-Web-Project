@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Create an Account</title>
+    <link href="/css/style2.css" rel="stylesheet" />
+</head>
+<body>
+    <div id ="container">
+        <div id="main">
+            <div class="navbar">
+                <ul>
+                    <li> <a href="/WebPages/main.htm">Main</a> </li>
+                    <li> <a href="../default.html">Objective</a> </li>
+                    <li> <a href="/WebPages/products.htm">Products </a> </li>
+                    <li> <a href="/WebPages/founders.htm">Founders</a> </li>
+                    <li> <a href="/WebPages/contact.htm">Contact</a> </li>
+                    <li> <a href="/WebPages/location.htm">Location</a> </li>
+                    <li> <a href="/WebPages/CreateAccount.htm">Create Free Account</a> </li>
+                </ul>
+            </div>
+            <div class="contact-title">
+                <header>
+                    <h1> Create an AutoCharms Account</h1>
+                    <h2> We welcome you to our Family.</h2>
+                </header>
+            </div>
+            <div>
+                <form method="post" action="controller/RegistrationController.cs" id="registration-form">
+                    <div class="field">
+                        <label for="first-name">First name:</label>
+                        <input type="text" id="first-name" name="FirstName" required="required" autofocus="autofocus" />
+                    </div>
+                    <div class="field">
+                        <label for="last-name">Last name:</label>
+                        <input type="text" id="last-name" name="LastName" required="required" />
+                    </div>
+                    <div class="field">
+                        <label for="email-address">Email address:</label>
+                        <input type="email" id="email-address" name="EmailAddress" required="required" />
+                    </div>
+                    <div class="field">
+                        <label for="password">Choose a password:</label>
+                        <input type="password" id="password" name="Password" required="required" pattern="[a-zA-Z0-9]{5,}" title="At least 5 letters and numbers" />
+                    </div>
+                    <div class="field">
+                        <label for="confirm-password">Confirm your password:</label>
+                        <input type="password" id="confirm-password" name="ConfirmPassword" required="required" />
+                    </div>
+                    <div class="field">
+                            <label for="customer">Customer Account:</label>
+                            <input type="radio" id="customer" name="AccountType" required="required" />
+                            <label for="business">Business Account:</label>
+                            <input type="radio" id="business" name="AccountType" required="required" />
+                    </div>
+                    <div id="submitbutton">
+                        <button type="submit">Register</button>
+                    </div>       
+                </form>
+            </div>           
+        </div>      
+    </div>
+</body>
+</html>

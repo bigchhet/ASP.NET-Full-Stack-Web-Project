@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ASP.NET_Full_Stack_Web_Project.Models.Tsurikawa>
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Show all Items</title>
+    <link href="../wwwroot/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!--------------------------Products------------------------------------>
+    <h1>AutoCharms Product</h1>
+    <br />
+    @Html.ActionLink("Add a new product", "AddTsurikawa")
+    <br />
+    <div class="all-product">
+        @foreach (var tsuri in Model)
+        {
+            <p>Model Name: @tsuri.Name</p>
+            <p>Model Description: @tsuri.Description</p>
+            <p>Model Color: @tsuri.Color</p>
+            <p>Model Price: @tsuri.Price</p>
+            @Html.ActionLink("Item details", "ShowTsurikawa", new { Id = tsuri.ID })
+            <br />
+            @Html.ActionLink("Edit Item", "EditTsurikawa", new { Id = tsuri.ID })
+            <br />
+            @Html.ActionLink("Delete Item", "DeleteTsurikawa", new { Id = tsuri.ID })
+            <br />
+        }
+    </div>
+</body>
+</html>

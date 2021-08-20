@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Objective</title>
+    <link href="/css/style2.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Our mission statement at AutoCharms is to provide our customers with quality products and quality service</h1>
+        <p>
+            Since 2021, we have been serving the car community of Southern Orange County by providing the most
+            premium design in tsurikawa manufacturing in the contintental United States. We have a money back guarantee, with a no
+            questions ask policy. We strive to build our community through car ethusiast, one AutoCharm at a time.
+        </p>
+    </header>
+    <div>
+        <iframe width="900" height="500" src="https://www.youtube-nocookie.com/embed/mLnpFhXE1oY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </div>
+    <div>
+        <button id="join" type="button" onclick="getLocation()"> Let us find friends near you!</button>
+    </div>
+    <script>
+        var x = document.getElementById("join");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+</html>

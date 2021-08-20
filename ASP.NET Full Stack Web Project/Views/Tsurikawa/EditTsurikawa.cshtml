@@ -1,0 +1,23 @@
+﻿@model ASP.NET_Full_Stack_Web_Project.Models.Tsurikawa
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit itmems</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.EditorForModel();
+        <input type="submit" value="Save" />
+    }
+
+    @Html.ValidationSummary()
+</body>
+</html>

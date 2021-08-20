@@ -1,0 +1,25 @@
+﻿@model ASP.NET_Full_Stack_Web_Project.Models.AirFreshner
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Show Item</title>
+    <link href="../wwwroot/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!--------------------------Single Product------------------------------------>
+    <h1>AutoCharms Product</h1>
+    <div class="single-product">
+        <p>Model Name: @Model.Name</p>
+        <p>Model Description: @Model.Description</p>
+        <p>Model Scent: @Model.Scent</p>
+        <p>Model Price: @Model.Price</p>
+        <br />
+        @Html.ActionLink("View all products", "ShowAllAirFreshners");
+    </div>
+</body>
+</html>

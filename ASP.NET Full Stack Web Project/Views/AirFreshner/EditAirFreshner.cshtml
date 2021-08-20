@@ -1,0 +1,26 @@
+﻿@model ASP.NET_Full_Stack_Web_Project.Models.AirFreshner
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Item</title>
+    <link href="../wwwroot/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!--------------------------Single Product------------------------------------>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.EditorForModel();
+            <input type="submit" value="Save" />
+        }
+
+        @Html.ValidationSummary()
+    </div>
+</body>
+</html>
+
